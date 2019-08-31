@@ -21,7 +21,7 @@ class ThreadCommand extends Command
      *
      * @var string
      */
-    protected $description = '?????';
+    protected $description = "关于多线程的测试";
 
     protected $bar;
 
@@ -55,7 +55,7 @@ class ThreadCommand extends Command
 
     private function _handleDo()
     {
-        $this->output->success('中文');
+        $this->output->success('中文 我的世界');
 
         $limit = 2858114;
         $option = [
@@ -101,7 +101,7 @@ class ThreadCommand extends Command
         $memory_need = ($memory_end - $memory_start)/(1024*1024);
         $memory_get_peak_usage  = memory_get_peak_usage()/(1024*1024);
 
-        $msg = 'need memory ' . $memory_need . 'MB , all memory: ' . $memory_get_peak_usage . ' MB now memory: ' . $memory_now. ' MB total : ' . $i . ' time ' . ($end_time - $start_time) . 's, unique tel number ' . count($this->list_tel_list['all'] ?? []);
+        $msg = '需要内存 ' . $memory_need . 'MB ,系统分配内存: ' . $memory_get_peak_usage . ' MB now memory: ' . $memory_now. ' MB 总共轮询 : ' . $i . ' 消耗时间 ' . ($end_time - $start_time) . 's, 唯一号码量 ' . count($this->list_tel_list['all'] ?? []);
 
         Log::debug('debug', [$msg]);
         $this->output->success('end'  . PHP_EOL . $msg . PHP_EOL);

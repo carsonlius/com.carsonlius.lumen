@@ -91,7 +91,7 @@ return [
         ],
         'mongodb_self' => [
             'driver'   => 'mongodb',
-            'host'     =>  env('MONGODB_BACKEND_HOST', '127.0.0.1'),
+            'host'     =>  '127.0.0.1',
             'port'     => 27017,
             'database' => 'learn2',
             'username' => env('MONGODB_BACKEND_USERNAME'),
